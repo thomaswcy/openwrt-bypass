@@ -270,7 +270,7 @@ EOF
 		udp_local_port=$local_port
 	elif [ -n "$UDP_RELAY_SERVER" ];then
 		udp_server=$(uci_get_by_name $UDP_RELAY_SERVER server)
-		if ! echo $udp_server | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$" >/dev/null;then
+		if ! echo $udp_server | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$">/dev/null;then
 				r=1
 		while ! A=$(nslookup $udp_server 2>/dev/null | grep Address | awk -F' ' '{print$NF}' | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");do
 		if ! A=$(nslookup $udp_server 223.5.5.5 2>/dev/null | grep Address | awk -F' ' '{print$NF}' | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");then
@@ -297,7 +297,7 @@ EOF
 	esac
 	if [ -n "$NF_SERVER" -a $run_mode != oversea ];then
 		nf_ip=$(uci_get_by_name $NF_SERVER server)
-		if ! echo $nf_ip | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$" >/dev/null;then
+		if ! echo $nf_ip | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$">/dev/null;then
 				r=1
 		while ! A=$(nslookup $nf_ip 2>/dev/null | grep Address | awk -F' ' '{print$NF}' | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");do
 		if ! A=$(nslookup $nf_ip 223.5.5.5 2>/dev/null | grep Address | awk -F' ' '{print$NF}' | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");then
@@ -534,7 +534,7 @@ start_local(){
 	rtype="socks"
 	[ $SO_SERVER = 0 -o "$socks5_start" = 1 ] && return
 	socks5_ip=$(uci_get_by_name $SO_SERVER server)
-	if ! echo $socks5_ip | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$" >/dev/null;then
+	if ! echo $socks5_ip | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$">/dev/null;then
 			r=1
 		while ! A=$(nslookup $socks5_ip 2>/dev/null | grep Address | awk -F' ' '{print$NF}' | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");do
 		if ! A=$(nslookup $socks5_ip 223.5.5.5 2>/dev/null | grep Address | awk -F' ' '{print$NF}' | grep -E "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$");then
