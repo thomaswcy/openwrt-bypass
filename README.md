@@ -12,6 +12,7 @@
 ### 相关依赖 
 
 Lua-Maxminddb: https://github.com/garypang13/openwrt-packages/tree/master/lua-maxminddb
+smartdns-le:   https://github.com/garypang13/openwrt-packages/tree/master/smartdns-le
 
 lean等源码编译本插件前请先执行
 
