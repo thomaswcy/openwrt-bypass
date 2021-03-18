@@ -100,7 +100,7 @@ endef
 
 define Package/$(PKG_NAME)/postinst
 #!/bin/sh
-[ -n "$${IPKG_INSTROOT}" ] || (/etc/init.d/bypass enable;/etc/uci-defaults/luci-bypass;rm -f /etc/uci-defaults/luci-bypass)
+[ -n "$${IPKG_INSTROOT}" ] || /etc/init.d/bypass enable
 endef
 
 define Build/Compile
