@@ -44,7 +44,7 @@ local dsp=require "luci.dispatcher"
 			xhr(task).then(thread);
 		}
 	}
-	if (doms.length < 100){
+	if (doms.length < 150){
 		for (let i=0; i < 20; i++){
 			thread()
 		}
