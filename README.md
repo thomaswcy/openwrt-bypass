@@ -21,9 +21,6 @@
 
 [TG交流与反馈](https://t.me/opwrts)
 
-
-#### 默认集成的DNS方案已是最优解,不推荐再与其他DNS插件比如adg搭配使用. 去广告推荐使用基于dnsmasq的 [luci-app-dnsfilter](https://github.com/garypang13/luci-app-dnsfilter)
-
 默认集成本插件的固件推荐: [https://github.com/garypang13/OpenWrt](https://t.me/opwrts)
 
 ![](https://raw.githubusercontent.com/garypang13/luci-app-bypass/main/screenshot.png)
