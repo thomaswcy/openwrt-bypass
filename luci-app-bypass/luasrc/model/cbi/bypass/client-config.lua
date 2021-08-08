@@ -391,7 +391,7 @@ o = s:option(Value, "grpc_serviceName", "ServiceName")
 o:depends("transport", "grpc")
 
 o = s:option(Flag, "gRPC_MultiMode", "MultiMode")
-o.rmempty = False
+o.rmempty = true
 o:depends("transport", "grpc")
 
 -- [[ mKCP部分 ]]--
